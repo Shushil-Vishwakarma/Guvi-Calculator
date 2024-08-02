@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .calculator {
+            width: 100%;
+            max-width: 360px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        .calculator-display {
+            padding: 20px;
+            background: #333;
+            color: white;
+            text-align: right;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            font-size: 24px;
+            overflow: hidden;
+        }
+        .calculator-buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .calculator-button {
+            padding: 20px;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+        .calculator-button.operator {
+            background: #f0ad4e;
+            color: white;
+        }
+        .calculator-button.operator:hover {
+            background: #ec971f;
+        }
+        .calculator-button.equal {
+            background: #5bc0de;
+            color: white;
+            grid-column: span 4;
+        }
+        .calculator-button.equal:hover {
+            background: #31b0d5;
+        }
+        @media (max-width: 768px) {
+            .calculator-button {
+                font-size: 16px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div id="display" class="calculator-display"></div>
+        <div id="buttons" class="calculator-buttons"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
